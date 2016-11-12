@@ -10,7 +10,10 @@ projects where one is configured, and falls back to use the `gradle` from the
 # Installation
 
 ## Installation with `brew`
-TODO
+
+```bash
+brew install nrodrigues/gradlew/gradlew
+```
 
 ## Aliasing the `gradle` command
 For maximum fidelity add a `gradle` alias to `gradlew` to your shell's configuration
