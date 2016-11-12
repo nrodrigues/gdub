@@ -72,11 +72,4 @@ execute_gradle() {
   fi
 }
 
-# gw may be sourced from other scripts as a library to select / run gradle(w).
-if [[ ${BASH_SOURCE[0]} != $0 ]]; then
-  export -f execute_gradle select_gradle lookup err
-else
-  set -e
-  execute_gradle "$@"
-  exit $?
-fi
+execute_gradle "$@"
