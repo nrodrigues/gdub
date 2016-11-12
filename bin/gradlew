@@ -66,9 +66,9 @@ execute_gradle() {
   # Say what we are gonna do, then do it.
   err "Using gradle at '${gradle}' to run buildfile '${build_gradle}':\n"
   if [[ -n "build_args[@]" ]]; then
-    "${gradle}" "${build_args[@]}"
+    exec "${gradle}" "${build_args[@]}"
   else
-    "${gradle}"
+    exec "${gradle}"
   fi
 }
 
