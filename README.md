@@ -1,64 +1,32 @@
-# What's gdub?
-gdub (`gw` on the command line) is a `gradle` / `gradlew` wrapper. Not to be
-confused with the [Gradle][] [Wrapper][], `gw` uses the Gradle Wrapper on
+# What's gradlew?
+`gradlew` is a `gradle` / `gradlew` wrapper. Not to be
+confused with the [Gradle][] [Wrapper][], `gradlew` uses the Gradle Wrapper on
 projects where one is configured, and falls back to use the `gradle` from the
-`$PATH` if a wrapper is not available. Also, `gw` is 66% shorter to type than `gradle`
-and 78% shorter to type than `./gradlew`.
+`$PATH` if a wrapper is not available. 
 
 [Gradle]:  http://www.gradle.org
 [Wrapper]: http://www.gradle.org/docs/current/userguide/gradle_wrapper.html
 
 # Installation
 
-## Installation with `bpkg`
-If you use [bpkg][], you may install like so:
-
-```bash
-bpkg install dougborg/gdub -g
-```
-
-[bpkg]: http://bpkg.io
-
-## Installing gdub from source
-You will probably want to [install Gradle][] first. While this is not
-technically necessary if all your projects are using a Gradle Wrapper, it is a
-good idea to have the latest version of `gradle` available system-wide because
-some handy Gradle features are available outside the context of an existing
-project.
-
-[install Gradle]: http://www.gradle.org/installation
-
-Check out a copy of the gdub repository. Then, either add the gdub `bin`
-directory to your `$PATH`, or run the provided `install` command with the
-location to the prefix in which you want to install gdub. The default prefix is
-`/usr/local`.
-
-For example, to install gdub into `/usr/local/bin`:
-
-```bash
-git clone https://github.com/dougborg/gdub.git
-cd gdub
-./install
-```
-
-Note: you may need to run `./install` with `sudo` if you do not have
-permission to write to the installation prefix.
+## Installation with `brew`
+TODO
 
 ## Aliasing the `gradle` command
-For maximum fidelity add a `gradle` alias to `gw` to your shell's configuration
+For maximum fidelity add a `gradle` alias to `gradlew` to your shell's configuration
 file.
 
 Example *bash*:
 
 ```bash
-echo "alias gradle=gw" >> ~/.bashrc
+echo "alias gradle=gradlew" >> ~/.bashrc
 source ~/.bashrc
 ```
 
-From now on you can just type `gradle ...` from wherever you are and `gw` takes
+From now on you can just type `gradle ...` from wherever you are and `gradlew` takes
 care of the rest. Happiness ensues!
 
-# Why gdub?
+# Why gradlew?
 
 ## The problems with `gradle` and `gradlew`
 gdub is a convenience for developers running local Gradle commands and addresses
@@ -84,10 +52,10 @@ $ pwd
 $ gradle -b ../../../../../build.gradle build
 ```
 
-With `gw`, this becomes:
+With `gradlew`, this becomes:
 
 ```bash
-$ gw build
+$ gradlew build
 ```
 
 ### You have to provide a relative path to `gradlew`
@@ -100,10 +68,10 @@ $ pwd
 $ ../../../../../../gradlew build
 ```
 
-Again, with `gw` this becomes:
+Again, with `gradlew` this becomes:
 
 ```bash
-$ gw build
+$ gradlew build
 ```
 
 ### You have a combination of the above problems
@@ -126,12 +94,12 @@ ok, or it might cause the build to break, but if a project has a `gradlew`, it
 is a pretty safe bet you should use it, and not whatever Gradle distribution you
 happen to have installed on your system.
 
-# The `gw` payoff
+# The `gradlew` payoff
 Anywhere you happen to be on your project, you can run the Gradle tasks of your
-project by typing `gw <tasks>`, regardless of whether you use the Gradle Wrapper
+project by typing `gradlew <tasks>`, regardless of whether you use the Gradle Wrapper
 in your project or not.
 
-`gw` works by looking upwards from your current directory and will run the
+`gradlew` works by looking upwards from your current directory and will run the
 nearest `build.Gradle` file with the nearest `gradlew`. If a `gradlew` cannot
 be found, it will run the nearest `build.Gradle` with your system's Gradle. This
 is probably always what you want to do if you are running Gradle from within a
