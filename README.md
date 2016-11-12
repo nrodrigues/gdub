@@ -12,7 +12,7 @@ projects where one is configured, and falls back to use the `gradle` from the
 ## Installation with `brew`
 
 ```bash
-brew install nrodrigues/gradlew/gradlew
+brew install nrodrigues/tap/gradlew
 ```
 
 ## Aliasing the `gradle` command
