@@ -32,7 +32,7 @@ care of the rest. Happiness ensues!
 # Why gradlew?
 
 ## The problems with `gradle` and `gradlew`
-gdub is a convenience for developers running local Gradle commands and addresses
+gradlew is a convenience for developers running local Gradle commands and addresses
 a few minor shortcomings of `gradle` and `gradlew`'s commandline behaviour.
 These are known issues, and they are set to be addressed in future versions of
 Gradle. If you are interested in the discussions surrounding them, check out:
@@ -41,7 +41,7 @@ Gradle. If you are interested in the discussions surrounding them, check out:
   - [Spencer Allain's Gradle Forum Post](http://gsfn.us/t/33g0l)
   - [Phil Swenson's Gradle Forum Post](http://gsfn.us/t/39h67)
 
-Here are the issues I feel are most important, and the ones gdub attempts to
+Here are the issues I feel are most important, and the ones gradlew attempts to
 address:
 
 ### You have to provide a relative path to `build.Gradle`
